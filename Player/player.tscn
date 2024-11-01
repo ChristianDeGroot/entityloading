@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk2lklmbq11ko"]
+
+[ext_resource type="Texture2D" uid="uid://dfninrlwq2uks" path="res://Player/Sprites/ch1_2x_idle_down_01.png" id="1_a6ikh"]
+[ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_td3uo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bfsxl"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_td3uo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bfsxl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -20)
+texture = ExtResource("1_a6ikh")
